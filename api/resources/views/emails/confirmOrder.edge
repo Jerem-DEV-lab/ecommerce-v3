@@ -1,0 +1,85 @@
+<mjml>
+  <mj-head>
+    <mj-title>Confirmation de votre commande</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500"></mj-font>
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif"></mj-all>
+      <mj-text font-weight="300" font-size="16px" color="#616161" line-height="24px"></mj-text>
+      <mj-section padding="0px"></mj-section>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-image href="https://epicerie-abjat.fr" height="200px" width="300px"
+                  src="https://res.cloudinary.com/dm69dfbof/image/upload/v1626855469/Email/test_btjakf.png"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="50%" padding="20px 0px 0px 0px">
+        <mj-text align="center" font-weight="700" padding="0px" font-size="18px" color="#212121">
+          MERCI POUR VOTRE COMMANDE
+        </mj-text>
+        <mj-divider border-width="1px" border-color="rgba(0, 0, 0, 0.12)"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-top="30px">
+      <mj-column width="100%">
+        <mj-text>
+          <p style="color:#4caf50; font-weight:500; letter-spacing: 0.1px; font-size:18px">
+            Bonjour,</p>
+          <p> Nous vous remercions de votre commande. Nous vous tiendrons informé par e-mail
+            lorsque votre commande sera prête. Vous pouvez suivre l’état de votre commande dans
+            votre espace personnel.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#E0E0E0"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-text>
+          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0">Résumer de votre commande
+            :</h3>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      @each(product in products)
+      <mj-column width="50%">
+        <mj-text>
+          <p style="font-weight: 500; margin-top: 0px;">{{product.product_name}}</p>
+          <p style="margin-top: 0px; font-size:14px">{{product.product_description}}</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="25%" vertical-align="middle">
+        <mj-text>
+          {{product.price_ttc}} € / {{product.unit}}
+        </mj-text>
+      </mj-column>
+      <mj-column width="25%">
+        <mj-text>
+          {{product.quantity}} {{product.unit}}
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="rgba(0, 0, 0, 0.12)"></mj-divider>
+      </mj-column>
+      @end
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-text align="center">&copy; Épicerie d'Abjat sur Bandiat 2021</mj-text>
+        <mj-text align="center">
+          <p style="font-size: 12px;">Ce message a été généré automatiquement, merci de ne pas
+            répondre.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

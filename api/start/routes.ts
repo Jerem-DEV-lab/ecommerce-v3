@@ -1,0 +1,7 @@
+import './Routes/AuthenficationRoutes/Authenfication'
+import './Routes/ProductsRoutes'
+import './Routes/AdministrationRoute'
+import './Routes/UserRoutes/UserRoutes'
+import './Routes/OrdersRoutes/OrdersRoutes'
+import './Routes/EventRoutes/EventRoutes'
+import './Routes/ReviewsRoute'
